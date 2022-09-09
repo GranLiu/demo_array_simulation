@@ -34,6 +34,9 @@ This is a matlab demo for creating a compact array with rectangular lattice, com
 
 ```
 
+## Simulation Environment
+CST Studio Suite 2021 + MATLAB R2021a
+
 ## Work Flow
 1. Open CST software,
 2. Open ./array_simulation/demo_array.m, change n_x (n_y),
@@ -41,6 +44,9 @@ This is a matlab demo for creating a compact array with rectangular lattice, com
 4. Open ./post_processing/demo_export_farfield.m (demo_export_eff.m), change n_x (n_y),
 5. Run script, data files will be exported into ./post_processing/data_***
 - More information can be found in the notes in scripts.
+
+## Tips
+- In order to export data correctly, one should first manually show the results (farfield, efficiency```) in the CST UI, and run script.
 
 ## Q&A
 - to be filled
