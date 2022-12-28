@@ -14,6 +14,7 @@ close all;
 %% Set array structure
 n_x = 2;                                    % num of antenna in a row
 n_y = 2;                                    % num of antenna in a column
+d_x = 'lambda/2';                           % antenna spacing in x axis [y is fixed to 0.5\lambda]
 
 %% Set simulation params
 f = 2e9;                                    % operating frequency [Hz]
@@ -155,7 +156,7 @@ sCommand = [sCommand 10 '.Reset'];
 sCommand = [sCommand 10 '.Name ','"port$port1"'];
 sCommand = [sCommand 10 '.AddName ','"solid$Dipole:lower"'];
 sCommand = [sCommand 10 '.AddName ','"solid$Dipole:upper"'];
-sCommand = [sCommand 10 '.Vector ','"-lambda/2*',num2str((n_x-1)/2),...
+sCommand = [sCommand 10 '.Vector ','"-',d_x,'*',num2str((n_x-1)/2),...
                             '", "lambda/2*',num2str((n_y-1)/2),'", "0"'];
 sCommand = [sCommand 10 '.UsePickedPoints ','"False"'];
 sCommand = [sCommand 10 '.InvertPickedPoints ','"False"'];
@@ -175,7 +176,7 @@ sCommand = [sCommand 10 '.Reset'];
 sCommand = [sCommand 10 '.Name ','"port$port1"'];
 sCommand = [sCommand 10 '.AddName ','"solid$Dipole:lower"'];
 sCommand = [sCommand 10 '.AddName ','"solid$Dipole:upper"'];
-sCommand = [sCommand 10 '.Vector ','"lambda/2", "0", "0"'];
+sCommand = [sCommand 10 '.Vector ','"',d_x,'", "0", "0"'];
 sCommand = [sCommand 10 '.UsePickedPoints ','"False"'];
 sCommand = [sCommand 10 '.InvertPickedPoints ','"False"'];
 sCommand = [sCommand 10 '.MultipleObjects ','"True"'];
